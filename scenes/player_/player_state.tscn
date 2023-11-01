@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bs8dqs806txni"]
+
+[node name="player_State" type="Node"]
+
+[node name="run" type="Node" parent="."]
+
+[node name="idle" type="Node" parent="."]
+
+[node name="jump" type="Node" parent="."]
+
+[node name="dash" type="Node" parent="."]
+
+[node name="death" type="Node" parent="."]

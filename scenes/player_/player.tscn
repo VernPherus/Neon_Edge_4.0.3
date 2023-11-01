@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3mr47fxi87or"]
+
+[ext_resource type="PackedScene" uid="uid://bs8dqs806txni" path="res://scenes/player_/player_state.tscn" id="1_yyp7x"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4bfwh"]
+radius = 1.0
+height = 4.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a1s8p"]
+
+[node name="player" type="CharacterBody2D"]
+
+[node name="player_hbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_4bfwh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_a1s8p")
+
+[node name="player_State" parent="." instance=ExtResource("1_yyp7x")]
