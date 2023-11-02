@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcvt6it8rk1nf"
-path="res://.godot/imported/NEON.png-4934fbf5621b0d6e58712f871f67c206.ctex"
+uid="uid://cada6yvs81cv3"
+path="res://.godot/imported/NEON land-Sheet.png-8f4e995cc14e88b55bec029ae45c1c56.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/icon/NEON.png"
-dest_files=["res://.godot/imported/NEON.png-4934fbf5621b0d6e58712f871f67c206.ctex"]
+source_file="res://assets/sprites/plyr_sprites/NEON land-Sheet.png"
+dest_files=["res://.godot/imported/NEON land-Sheet.png-8f4e995cc14e88b55bec029ae45c1c56.ctex"]
 
 [params]
 

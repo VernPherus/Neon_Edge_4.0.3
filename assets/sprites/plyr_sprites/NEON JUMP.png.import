@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcvt6it8rk1nf"
-path="res://.godot/imported/NEON.png-4934fbf5621b0d6e58712f871f67c206.ctex"
+uid="uid://rfuac72nfu01"
+path="res://.godot/imported/NEON JUMP.png-ce7d58874865c71f6d20ce0412922dcb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/icon/NEON.png"
-dest_files=["res://.godot/imported/NEON.png-4934fbf5621b0d6e58712f871f67c206.ctex"]
+source_file="res://assets/sprites/plyr_sprites/NEON JUMP.png"
+dest_files=["res://.godot/imported/NEON JUMP.png-ce7d58874865c71f6d20ce0412922dcb.ctex"]
 
 [params]
 

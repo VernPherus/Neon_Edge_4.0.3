@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfkk5wvov70th"]
+
+[sub_resource type="Theme" id="Theme_n1d3x"]
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="base_ctnr" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="bck_grnd" type="ColorRect" parent="base_ctnr"]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="base_2" type="VBoxContainer" parent="base_ctnr"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="title_container" type="VBoxContainer" parent="base_ctnr/base_2"]
+layout_mode = 2
+
+[node name="title" type="Label" parent="base_ctnr/base_2/title_container"]
+layout_mode = 2
+text = "NEON EDGE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn_container" type="VBoxContainer" parent="base_ctnr/base_2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="play" type="Button" parent="base_ctnr/base_2/btn_container"]
+layout_mode = 2
+theme = SubResource("Theme_n1d3x")
+text = "PLAY
+"
+
+[node name="settings" type="Button" parent="base_ctnr/base_2/btn_container"]
+layout_mode = 2
+text = "SETTINGS
+"
+
+[node name="quit" type="Button" parent="base_ctnr/base_2/btn_container"]
+layout_mode = 2
+text = "QUIT
+"
