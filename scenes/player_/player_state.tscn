@@ -4,15 +4,3 @@
 
 [node name="player_State" type="Node"]
 script = ExtResource("1_n3yot")
-
-[node name="run" type="Node" parent="."]
-
-[node name="idle" type="Node" parent="."]
-
-[node name="jump" type="Node" parent="."]
-
-[node name="dash" type="Node" parent="."]
-
-[node name="death" type="Node" parent="."]
-
-[node name="slide" type="Node" parent="."]
