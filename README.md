@@ -1,6 +1,7 @@
 # Neon Edge
 
 Neon Edge is now in Godot 4.0.3!
+Run fast, avoid all the hostile bots, traps and more dangers hidden within the depths of this large mysterious faciliy
 
 ---
 
