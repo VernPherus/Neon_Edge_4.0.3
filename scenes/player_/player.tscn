@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://b3mr47fxi87or"]
+[gd_scene load_steps=62 format=3 uid="uid://b3mr47fxi87or"]
 
 [ext_resource type="Texture2D" uid="uid://duykonec48w7x" path="res://assets/sprites/plyr_sprites/NEON idle-Sheet.png" id="1_5uvch"]
 [ext_resource type="Texture2D" uid="uid://coxr05g6tpup1" path="res://assets/sprites/plyr_sprites/NEON run animation-Sheet.png" id="1_e12mx"]
@@ -8,6 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://cjabfjjuycep2" path="res://assets/sprites/plyr_sprites/NEON wall slide-Sheet.png" id="5_taiwl"]
 [ext_resource type="Script" path="res://scripts/player_scripts/player_StateManager.gd" id="7_7p8qf"]
 [ext_resource type="Script" path="res://scripts/player_scripts/idle.gd" id="8_g53kb"]
+[ext_resource type="Script" path="res://scripts/player_scripts/run.gd" id="9_nlify"]
+[ext_resource type="Script" path="res://scripts/player_scripts/jump.gd" id="10_3me8h"]
+[ext_resource type="Script" path="res://scripts/player_scripts/dash.gd" id="11_t0xgo"]
+[ext_resource type="Script" path="res://scripts/player_scripts/climb.gd" id="12_jy76q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aql1p"]
 atlas = ExtResource("1_5uvch")
@@ -554,8 +558,9 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource("AnimationNodeStateMachinePlayback_fmrxu")
 parameters/Move/blend_position = -0.99774
 
-[node name="player_StateManager" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+[node name="player_StateManager" type="Node" parent="." node_paths=PackedStringArray("player", "initial_state")]
 script = ExtResource("7_7p8qf")
+player = NodePath("..")
 initial_state = NodePath("idle")
 
 [node name="idle" type="Node" parent="player_StateManager" node_paths=PackedStringArray("player")]
@@ -563,9 +568,13 @@ script = ExtResource("8_g53kb")
 player = NodePath("../..")
 
 [node name="run" type="Node" parent="player_StateManager"]
+script = ExtResource("9_nlify")
 
 [node name="jump" type="Node" parent="player_StateManager"]
+script = ExtResource("10_3me8h")
 
 [node name="dash" type="Node" parent="player_StateManager"]
+script = ExtResource("11_t0xgo")
 
 [node name="climb" type="Node" parent="player_StateManager"]
+script = ExtResource("12_jy76q")
