@@ -269,11 +269,6 @@ transitions = ["Start", "Move", SubResource("AnimationNodeStateMachineTransition
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_hgn0w")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="player_cam" parent="CanvasLayer" instance=ExtResource("2_u4x0k")]
-process_mode = 3
-
 [node name="player_hbox" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_4bfwh")
 
@@ -293,9 +288,7 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource("AnimationNodeStateMachinePlayback_fmrxu")
 parameters/Move/blend_position = -0.99774
 
-[node name="state_debug" type="Label" parent="."]
-offset_left = -92.0
-offset_top = -116.0
-offset_right = 8.0
-offset_bottom = -90.0
-text = "STATE: "
+[node name="player_cam" parent="." instance=ExtResource("2_u4x0k")]
+process_mode = 3
+process_callback = 0
+position_smoothing_enabled = false

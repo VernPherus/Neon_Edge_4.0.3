@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b3mr47fxi87or" path="res://scenes/player_/player.tscn" id="1_bwavc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w0lbx"]
-size = Vector2(2062, 95)
+size = Vector2(2962, 95)
 
 [node name="map_0" type="Node2D"]
 position = Vector2(607, 448)
@@ -14,5 +14,23 @@ position = Vector2(-1, -38)
 [node name="floor" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
-position = Vector2(427, 102.5)
+position = Vector2(877, 102.5)
+shape = SubResource("RectangleShape2D_w0lbx")
+
+[node name="ColorRect" type="ColorRect" parent="floor"]
+offset_left = -600.0
+offset_top = 54.0
+offset_right = 2360.0
+offset_bottom = 157.0
+
+[node name="wall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
+position = Vector2(2407, -1325)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_w0lbx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="wall"]
+position = Vector2(-651, -1331)
+rotation = 1.5708
 shape = SubResource("RectangleShape2D_w0lbx")
