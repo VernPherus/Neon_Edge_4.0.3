@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b3mr47fxi87or"]
+[gd_scene load_steps=29 format=3 uid="uid://b3mr47fxi87or"]
 
 [ext_resource type="Texture2D" uid="uid://duykonec48w7x" path="res://assets/sprites/plyr_sprites/NEON idle-Sheet.png" id="1_5uvch"]
 [ext_resource type="Texture2D" uid="uid://coxr05g6tpup1" path="res://assets/sprites/plyr_sprites/NEON run animation-Sheet.png" id="1_e12mx"]
@@ -7,10 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://rfuac72nfu01" path="res://assets/sprites/plyr_sprites/NEON JUMP.png" id="2_weavj"]
 [ext_resource type="Texture2D" uid="uid://cada6yvs81cv3" path="res://assets/sprites/plyr_sprites/NEON land-Sheet.png" id="3_fkxq7"]
 [ext_resource type="Texture2D" uid="uid://cjabfjjuycep2" path="res://assets/sprites/plyr_sprites/NEON wall slide-Sheet.png" id="5_taiwl"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4bfwh"]
-radius = 28.0
-height = 160.0
+[ext_resource type="Script" path="res://scripts/player_scripts/player_STATES.gd" id="8_ratfg"]
+[ext_resource type="Script" path="res://scripts/player_scripts/player_states/player_IDLE.gd" id="9_4y5v2"]
+[ext_resource type="Script" path="res://scripts/player_scripts/player_states/player_MOVE.gd" id="12_46d70"]
+[ext_resource type="Script" path="res://scripts/player_scripts/player_states/player_FALL.gd" id="12_mx3nm"]
+[ext_resource type="Script" path="res://scripts/player_scripts/player_states/player_DASH.gd" id="13_cbnci"]
+[ext_resource type="Script" path="res://scripts/player_scripts/player_states/player_state_label.gd" id="14_2b6mx"]
 
 [sub_resource type="Animation" id="Animation_6qlgj"]
 length = 0.001
@@ -266,11 +268,12 @@ transitions = ["Start", "Move", SubResource("AnimationNodeStateMachineTransition
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_fmrxu"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1yd1j"]
+radius = 28.0
+height = 156.0
+
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_hgn0w")
-
-[node name="player_hbox" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_4bfwh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(5, 5)
@@ -292,3 +295,34 @@ parameters/Move/blend_position = -0.99774
 process_mode = 3
 process_callback = 0
 position_smoothing_enabled = false
+
+[node name="player_hbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_1yd1j")
+
+[node name="player_STATES" type="Node" parent="." node_paths=PackedStringArray("character", "animsTREE", "initialState")]
+script = ExtResource("8_ratfg")
+character = NodePath("..")
+animsTREE = NodePath("../AnimationTree")
+initialState = NodePath("player_IDLE")
+
+[node name="player_IDLE" type="Node" parent="player_STATES"]
+script = ExtResource("9_4y5v2")
+
+[node name="player_FALL" type="Node" parent="player_STATES"]
+script = ExtResource("12_mx3nm")
+
+[node name="player_DASH" type="Node" parent="player_STATES"]
+script = ExtResource("13_cbnci")
+
+[node name="player_MOVE" type="Node" parent="player_STATES"]
+script = ExtResource("12_46d70")
+
+[node name="PlayerState" type="Label" parent="." node_paths=PackedStringArray("stateManager")]
+visible = false
+offset_left = -74.0
+offset_top = -113.0
+offset_right = -19.0
+offset_bottom = -87.0
+text = "STATE: "
+script = ExtResource("14_2b6mx")
+stateManager = NodePath("../player_STATES")
