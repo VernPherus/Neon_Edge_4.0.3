@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 # ++[DEVELOPMENT ON HIATUS]++
 
@@ -11,7 +10,6 @@ Current development of neon edge is on hiatus for the forseable future.
 ## Neon Edge
 =======
 # Neon Edge
->>>>>>> 3b871250187a8d241b8bc1af92dbcaec37797d82
 
 Neon Edge is now in Godot 4.0.3!
 Run fast, avoid all the hostile bots, traps and more dangers hidden within the depths of this large mysterious faciliy
@@ -40,4 +38,3 @@ Run fast, avoid all the hostile bots, traps and more dangers hidden within the d
 <<<<<<< HEAD
 
 =======
->>>>>>> 3b871250187a8d241b8bc1af92dbcaec37797d82
