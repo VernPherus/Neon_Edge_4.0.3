@@ -48,4 +48,8 @@ func switch_states(state, new_state_name):
 	
 	new_state.enter()
 	currentState = new_state
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 3b871250187a8d241b8bc1af92dbcaec37797d82

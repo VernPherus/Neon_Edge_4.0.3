@@ -64,10 +64,13 @@ move_dash={
 
 pointing/emulate_touch_from_mouse=true
 
+<<<<<<< HEAD
 [physics]
 
 2d/default_gravity=120.0
 
+=======
+>>>>>>> 3b871250187a8d241b8bc1af92dbcaec37797d82
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
