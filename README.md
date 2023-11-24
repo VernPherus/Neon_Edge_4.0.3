@@ -1,4 +1,13 @@
-# Neon Edge
+
+# ++[DEVELOPMENT ON HIATUS]++
+
+Current development of neon edge is on hiatus for the forseable future. 
+
+*-Platformer games are quite hard to develop.*
+
+---
+
+## Neon Edge
 
 Neon Edge is now in Godot 4.0.3!
 Run fast, avoid all the hostile bots, traps and more dangers hidden within the depths of this large mysterious faciliy
@@ -24,3 +33,4 @@ Run fast, avoid all the hostile bots, traps and more dangers hidden within the d
 - Level optimization
 - Better game scalability
 - Finish the initial plan for the game
+
